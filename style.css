@@ -1,27 +1,97 @@
-#questions h2{
-    margin-left: 40px;
-    font-family: 'Courier New', Courier, monospace;
+
+body{
+    background: linear-gradient(rgb(138, 137, 137),rgb(159, 160, 130));
+    color: aliceblue;
 }
-.panel{
+#ques{
+    margin-left: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+}
+.acaccordion-item{
     color: aliceblue;
     margin-left: 40px;
-    
-    
 }
-.panel button{
+.accordion {
     width: 90%;
+    color: white;
+    max-width: 1100px;
+    margin: 20px auto;
+    background: #222;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .accordion-item {
+    border-bottom: 1px solid #333;
+  }
+  .accordion-header {
     padding: 15px;
-    text-align: left;
-    color: aliceblue;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    background-color: rgb(85, 85, 85);
-    border: none;
-    margin-bottom: 20px;
-    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+  
+  .accordion-header:hover {
+    background: #333;
+  }
+  .accordion-content {
+    padding: 0 15px 15px;
+    display: none;
+  } 
+
+.accordion-item .icon{
+    font-size: 20px;
 }
-.panel p{
-    width: 90%;
+#membership{
+    text-align: center;
+}
+
+#inputmail{
+    padding: 13px;
+    padding-right: 45px;
+    padding-right: 45px;    
+    border: 1px solid rgb(85, 85, 85);
+    border-radius: 20px;
     background-color: rgb(85, 85, 85);
-    /* display: none; */
+    font-size: 100%;
+    color: whitesmoke;
+}
+#inputmail[type="text"]:focus::placeholder{
+    color: white;
+}
+#regbutton{
+    padding: 13px;
+    padding-right: 30px;
+    padding-left: 30px;
+    color: white;
+    border: 1px solid rgb(85, 85, 85);
+    background-color: brown;
+    font-weight: 800;
+    font-size: 110%;
+    border-radius: 20px;
+}
+#regbutton:hover{
+    background-color: rgb(122, 38, 38);
+}
+#question{
+    margin-left:120.3px;
+}
+#links{
+    width: 50%;
+    margin-left: 120px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+#links a{
+    color: black;
+}
+#lang{
+    margin-left: 120px;
+    padding: 8px;
+    border-radius: 20px;
+}
+#lastpara{
+    margin-left: 120px;
 }
