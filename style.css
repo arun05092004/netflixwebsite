@@ -1,0 +1,27 @@
+#questions h2{
+    margin-left: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.panel{
+    color: aliceblue;
+    margin-left: 40px;
+    
+    
+}
+.panel button{
+    width: 90%;
+    padding: 15px;
+    text-align: left;
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    background-color: rgb(85, 85, 85);
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+.panel p{
+    width: 90%;
+    background-color: rgb(85, 85, 85);
+    /* display: none; */
+}
