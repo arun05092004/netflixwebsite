@@ -1,44 +1,385 @@
+*{
+    margin: 0;
+    padding: 0;
 
+}
 body{
-    background: linear-gradient(rgb(138, 137, 137),rgb(159, 160, 130));
-    color: aliceblue;
+    background: #111;
+      margin: 0;
+      padding: 20px;
 }
+#bg-img{
+  height: 190pc;
+  width: 100%;
+  background-image: url(./assets/homepage\ bg.jpg),
+  radial-gradient(ellipse at center, rgba(0,0,0,0) 40%, rgba(182, 67, 130, 0.7) 15%);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  position: relative;
+}
+#bg-text{
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  z-index: 5;
+  position: absolute;
+  top: 0%;
+}
+#lang-align{
+    padding: 10px;
+}
+#lang-align #select{
+    border-radius: 20px;
+    padding: 5px;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    padding: 5px 5px 5px 10px;
+}
+#sign-align{
+    padding: 10px;
+    padding-right: 40px;
+}
+#sign-align button{
+    padding: 5px 10px 5px 10px;
+    border-radius: 30px;
+    border: none;
+}
+#sign-align button a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    
+}
+#login{
+    height: 40pc;
+    width: 100pc;
+    background: 
+      radial-gradient(ellipse at center, rgba(0,0,0,0) 40%, rgba(11, 11, 11, 0.7) 100%),
+      url('./assets/homepage\ bg.jpg') no-repeat center center / cover;
+    border-radius: 80px;
+    padding-top: 270px;
+    margin-left: 30px;
+    
+    /* background: linear-gradient(whitesmoke,black,whitesmoke); */
+}
+#loginpage{
+  margin-left: 550px;
+  color: white;
+}
+#loginpage h1{
+  width:48% ;
+    font-weight: bold;
+    font-size: 50px;
+    padding: 10px;
+    text-align: center;
+    
+}
+#loginpage h3{
+  padding-left: 60px;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+#loginpage p{
+  padding-left: 40px;
+  font-weight: 300;
+}
+#homereg{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    
+}
+.inputmail{
+    padding: 13px;
+    padding-right: 70px;    
+    border: 1px solid rgb(85, 85, 85);
+    border-radius: 20px;
+    background-color: rgb(85, 85, 85);
+    font-size: 100%;
+    color: whitesmoke;
+    margin: 10px;
+}
+.inputmail[type="text"]:focus::placeholder{
+    color: white;
+}
+.regbutton{
+    padding: 12px;
+    padding-right: 30px;
+    padding-left: 30px;
+    color: white;
+    border:none;
+    background-color: rgb(206, 50, 50);
+    font-weight: 800;
+    font-size: 110%;
+    border-radius: 20px;
+}
+.regbutton:hover{
+    background-color: rgb(195, 31, 31);
+}
+#Trending{
+    color: aliceblue;
+    margin-left: 130px;
+    padding: 20px;
+    font-weight: 600;
+}
+.poster-carousel {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+  }
+
+  .poster-carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for clean look */
+  }
+
+  .poster-track img {
+    display: inline-block;
+    width: 260px;
+    height: 340px;
+    margin: 0 10px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .poster-track img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
+
+  /* Navigation Buttons */
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 18px;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .carousel-button.prev {
+    left: 15px;
+    padding-bottom: 40px;
+  }
+
+  .carousel-button.next {
+    right: 10px;
+    padding-bottom: 40px;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    width: 90%;
+    margin-left: 130px;
+  }
+  .popup{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    display: none;
+  }
+  .card {
+    width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1c1c1c;
+    color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    position: relative;
+  }
+  .card img {
+    width: 100%;
+    display: block;
+    /* filter: grayscale(100%); */
+  }
+  .card-content {
+    padding: 20px;
+    background: linear-gradient(to top, rgba(45, 45, 45, 0.9) 50%, rgba(17, 17, 17, 0.5) 100%);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .card-tit{
+    font-size: 32px;
+    color: #ff2c2c;
+    margin: 0;
+    font-weight: bold;
+  }
+  .card-meta {
+    font-size: 13px;
+    margin: 8px 0;
+    color: #aaaaaa;
+  }
+  .card-description {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #dddddd;
+  }
+  .subscribe {
+    display: flex;
+    margin-top: 10px;
+  }
+  .subscribe input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    margin-right: 5px;
+  }
+  .subscribe button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 3px;
+    margin: 0 30px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  #plans{
+    margin-left: 130px;
+    
+  }
+  #plans h4{
+    color: aliceblue;
+    margin-left: 20px;
+    font-size: 30px;
+    padding: 10px;
+    font-weight: 600;
+  }
+  .card{
+    background: linear-gradient(180deg, #0A2A4B, #150C25);
+    color: aliceblue;
+    padding: 25px 0px 0px 30px;
+    border-radius: 20px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  .card:hover{
+    background: linear-gradient(150deg, #3e7ebe, #120b1e);
+  }
+  .card1{
+    background: linear-gradient(180deg, #113D64, #150C25);
+    padding: 25px 0px 0px 30px;
+    font-weight: 400;
+    border-radius: 20px;
+    color: aliceblue;
+    cursor: pointer;
+  }
+  .card1:hover{
+    background: linear-gradient(150deg, #3b6fa3, #120b1e);
+  }
+  .card2{
+    background: linear-gradient(180deg, #5B1A72, #150C25);
+    padding: 25px 0px 0px 30px;
+    font-weight: 400;
+    border-radius: 20px;
+    color: aliceblue;
+    cursor: pointer;
+  }
+  .card2:hover{
+    background: linear-gradient(180deg, #9436b6, #22153a);
+  }
+  .card3{
+    background: linear-gradient(180deg, #7B0F31, #150C25);
+    color: aliceblue;
+    padding: 30px 0px 0px 30px;
+    font-weight: 400;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .card3:hover{
+    background: linear-gradient(180deg, #79223e, #261345);
+  }
+  .card-subtitle{
+    color: rgb(194, 194, 194);
+  }
+  .card-link{
+    color: rgb(194, 194, 194);
+    text-decoration: none;
+  }
+  #reasons{
+    margin-left: 130px;
+  }
+  #reasons h4{
+    margin-left: 20px;
+    font-weight: 600;
+    color: aliceblue;
+    font-size: 30px;
+    padding: 20px;
+  }
+  .point{
+    color: rgb(207, 207, 207);  
+    background: #262525;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  .point svg{
+    margin-left: 200px;
+    padding-bottom: 20px;
+  }
+  .card-title{
+    font-weight: 600;
+    padding-bottom: 8px;
+  }
 #ques{
-    margin-left: 60px;
-    font-family: 'Courier New', Courier, monospace;
+    margin-left: 130px;
     color: aliceblue;
-}
-.acaccordion-item{
-    color: aliceblue;
-    margin-left: 40px;
+    padding: 10px;
+    font-weight: 600;
 }
 .accordion {
-    width: 90%;
-    color: white;
-    max-width: 1100px;
+    width: 100%;
+    max-width: 1350px;
     margin: 20px auto;
-    background: #222;
-    border-radius: 5px;
-    overflow: hidden;
+    border: none;
+    /* background: #1b0101; */
+    border-radius: 20px;
+    margin-left: 140px;
+    /* overflow: hidden; */
   }
-  .accordion-item {
-    border-bottom: 1px solid #333;
-  }
+  .accordioncontent {
+    max-height: 0;
+    overflow: auto;
+    transition: max-height 0.3s ease;
+    color: aliceblue;
+    background: #262525;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+.accordioncontent.active {
+    max-height: 500px;
+    padding: 15px; /* or any value large enough to show the content */
+}
+
   .accordion-header {
-    padding: 15px;
+    padding: 25px;
+    font-size: 20px;
+    font-weight: 600;
     cursor: pointer;
     display: flex;
+    border-radius: 20px;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: rgb(207, 207, 207);
+    background: #262525;
+    margin-bottom: 10px;
   }
   
   .accordion-header:hover {
-    background: #333;
-  }
-  .accordion-content {
-    padding: 0 15px 15px;
-    display: none;
+    background: #6c6b6b;
   } 
 
 .accordion-item .icon{
@@ -46,52 +387,36 @@ body{
 }
 #membership{
     text-align: center;
+    color: aliceblue;
 }
 
-#inputmail{
-    padding: 13px;
-    padding-right: 45px;
-    padding-right: 45px;    
-    border: 1px solid rgb(85, 85, 85);
-    border-radius: 20px;
-    background-color: rgb(85, 85, 85);
-    font-size: 100%;
-    color: whitesmoke;
-}
-#inputmail[type="text"]:focus::placeholder{
-    color: white;
-}
-#regbutton{
-    padding: 13px;
-    padding-right: 30px;
-    padding-left: 30px;
-    color: white;
-    border: 1px solid rgb(85, 85, 85);
-    background-color: brown;
-    font-weight: 800;
-    font-size: 110%;
-    border-radius: 20px;
-}
-#regbutton:hover{
-    background-color: rgb(122, 38, 38);
-}
+
 #question{
-    margin-left:120.3px;
+    margin-left:140px;
+    color: aliceblue;
+}
+#question a{
+  color: aliceblue;
 }
 #links{
-    width: 50%;
-    margin-left: 120px;
+    width: 80%;
+    margin-left: 140px;
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
 #links a{
-    color: black;
+    color: rgb(178, 179, 180);
+    padding: 6px;
 }
 #lang{
-    margin-left: 120px;
+    margin-left: 140px;
     padding: 8px;
     border-radius: 20px;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
 }
 #lastpara{
-    margin-left: 120px;
+    color: aliceblue;
+    margin-left: 140px;
 }
